@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/productList.css">
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mmm-header">
+    <div class="logo-left">
+      <a href="#">
+        <img src="images/header_logo.png" alt="">
+      </a>
+    </div>
+    <div class="app-dowmload">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </div>
+  <!--搜索框-->
+  <div class="search">
+    <form>
+      <input class="search-text" type="text" placeholder="请输入您想要比价的商品">
+      <button>搜索</button>
+    </form>
+  </div>
+
+  <!--面包屑导航-->
+  <div class="pro-nav">
+    <a href="index.html">首页&nbsp;</a><span>&gt;</span>
+    <a href="category.html">&nbsp;全部分类</a>&nbsp;<span>&gt;&nbsp;</span>
+    <a href='javascript:;' class="pro-nav-name"></a>
+    <button>筛选</button>
+  </div>
+
+  <!--分类信息-->
+  <div class="product-list">
+    <!--模板引擎渲染tpl3-->
+  </div>
+
+  <!--分页-->
+  <div class="pro-pages">
+    <span class="page-before"><a href="javascript:;">上一页</a></span>
+    <span class="page-num">
+<!--模板引擎渲染tpl2-->
+    </span>
+    <span class="page-next"><a href="javascript:;">下一页</a></span>
+  </div>
+
+  <!--底部-->
+  <div class="mmb-footer">
+    <div class="footer-bar">
+      <div class="login"><a href="#">登录</a></div>
+      <div class="register"><a href="#">注册</a></div>
+      <div class="toTop"><a href="javascript:;"><img src="http://www.zuyushop.com/wap/images/more.png" alt="">回到顶部</a>
+      </div>
+    </div>
+    <div class="footer-msg">
+      <p><a href="#">手机APP下载</a>&nbsp;&nbsp; 慢慢买手机版&nbsp;&nbsp;<span> -- 掌上比价平台</span></p>
+      <p class="addr">m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/html" id="tpl">
+  {{each result as v i}}
+  <span>{{v.category}}&nbsp;&gt;</span>
+  {{/each}}
+</script>
+
+<script type="text/html" id="tpl2">
+  <select>
+    {{each pageArr as v i}}
+    {{if v==currentPage}}
+    <option value="{{v}}" selected>{{v}}/{{totalPages}}</option>
+    {{else}}
+    <option value="{{v}}">{{v}}/{{totalPages}}</option>
+    {{/if}}
+    {{/each}}
+  </select>
+</script>
+
+<script type="text/html" id="tpl3">
+  {{each result as v i}}
+  <div class="pro-item">
+    <a href="bijia.html?productid={{v.productId}}&categoryid={{v.categoryId}}">
+    {{#v.productImg}}
+    <div class="pro-content">
+      <p class="pro-name">{{v.productName}}</p>
+      <p class="pro-price">{{v.productPrice}}</p>
+      <p class="pro-others"><span>{{v.productQuote}}</span>&nbsp;&nbsp;&nbsp;<span>{{v.productCom}}</span></p>
+    </div>
+    </a>
+  </div>
+  {{/each}}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/productList.js"></script>
+</body>
+</html>

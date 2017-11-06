@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mmm-header">
+    <div class="logo-left">
+      <a href="#">
+        <img src="images/header_logo.png" alt="">
+      </a>
+    </div>
+    <div class="app-dowmload">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </div>
+  <!--搜索框-->
+  <div class="search">
+    <form>
+      <input class="search-text" type="text" placeholder="请输入您想要比价的商品">
+      <button>搜索</button>
+    </form>
+  </div>
+  <div class="mmm-menu">
+    <ul class="clearfix">
+      <!--模板引擎渲染tpl-->
+
+    </ul>
+  </div>
+  <!--内容-->
+  <div class="mmm-content">
+    <!--标题-->
+    <div class="list-title">
+      <span>超值折扣推荐</span>
+      <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+    </div>
+    <div class="list-content">
+      <!--模板引擎渲染-->
+    </div>
+
+  </div>
+
+
+  <a class="more-bar" href="#">更多优惠信息 »</a>
+  <div class="recommen">
+    <span>品牌排行</span>
+    <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+  </div>
+
+  <!--底部-->
+  <div class="mmb-footer">
+    <div class="footer-bar">
+      <div class="login"><a href="#">登录</a></div>
+      <div class="register"><a href="#">注册</a></div>
+      <div class="toTop"><a href="javascript:;"><img src="http://www.zuyushop.com/wap/images/more.png" alt="">回到顶部</a>
+      </div>
+    </div>
+    <div class="footer-msg">
+      <p><a href="#">手机APP下载</a>&nbsp;&nbsp; 慢慢买手机版&nbsp;&nbsp;<span> -- 掌上比价平台</span></p>
+      <p class="addr">m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/html" id="tpl">
+  {{each result as v i}}
+  <li>
+    <a href="{{v.titlehref}}" data-id="{{v.indexmenuId}}" class="{{i>7?'now':''}}" id="{{i==7?'more':''}}">
+      {{#v.img}}
+      <p>{{v.name}}</p>
+    </a>
+  </li>
+  {{/each}}
+</script>
+<script type="text/html" id="tpl2">
+  {{each result as v i}}
+  <div class="list-item">
+    <a href="#" class="clearfix">
+      <div class="item-img">{{#v.productImgSm}}</div>
+      <div class="item-title"><p>{{v.productName}}<span class="price">{{v.productPinkage}}</span></p></div>
+      <div class="item-message">
+        <span>{{v.productFrom}}|{{v.productTime}}</span>
+
+      </div>
+      <div class="comment fr">
+        <span class="fa fa-commenting-o"></span><span>{{v.productComCount}}</span>
+      </div>
+    </a>
+  </div>
+  {{/each}}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
