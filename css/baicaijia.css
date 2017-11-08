@@ -1,0 +1,133 @@
+.baicai-nav{
+  height: 36px;
+  background-color: #fff;
+  line-height: 36px;
+  position: relative;
+}
+.baicai-nav ul {
+  /*width: 2000px;*/
+  height: 36px;
+  padding-right: 36px;
+}
+.baicai-nav li{
+  padding: 0 8px;
+  float: left;
+  text-align: center;
+}
+.baicai-nav li.now{
+  color: red;
+  border-bottom: 3px solid red;
+}
+.baicai-nav .fa-search{
+  position: absolute;
+  right: 0;
+  bottom:0;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  line-height: 36px;
+  text-align: center;
+}
+
+
+/*内容*/
+.baicai-item{
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.baicai-item img{
+  width: 135px;
+  height: 130px;
+  float: left;
+  margin-right: 5px;
+}
+.baicai-item p{
+  padding-left: 135px;
+  height: 35px;
+}
+
+.href{
+  float: right;
+}
+.href a{
+  width: 58px;
+  height: 28px;
+  line-height: 28px;
+  background-color: red;
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+}
+.percent{
+  float: left;
+}
+.bar{
+  height: 30px;
+}
+.quanhou{
+  color: red;
+  font-size: 18px;
+}
+em{
+  font-size: 13px;
+  margin-left: 5px;
+}
+del{
+  font-size: 12px;
+  color: #ccc;
+  margin-left: 12px;
+}
+.bar i span {
+  padding: 0 41px;
+  font-size: 13px;
+  color: #666;
+}
+.bar{
+  position: absolute;
+  left: 0;
+  margin-left: 140px;
+}
+.bar b{
+  font-size: 13px;
+  color: red;
+  font-weight:400;
+}
+.percent{
+  margin-top: 20px;
+}
+.percent a{
+  display: block;
+  width: 116px;
+  height: 26px;
+  border: 1px dashed red;
+  font-size: 12px;
+  color: red;
+  line-height: 26px;
+  text-align: center;
+}
+.remain{
+  position: relative;
+}
+.outer {
+  width: 82px;
+  height: 14px;
+  border:1px solid red;
+  border-radius: 7px;
+  background-color: deeppink;
+  opacity: 0.5;
+  margin-left: 140px;
+  position: absolute;
+  left: 0;
+}
+.remain .inner{
+  position: absolute;
+  left: 0;
+  width: 20px;
+  background-color: red;
+  height: 14px;
+  border-radius: 7px;
+  margin-left: 140px;
+}

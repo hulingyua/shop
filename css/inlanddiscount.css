@@ -1,0 +1,31 @@
+
+.discount-main li{
+  float: left;
+  width: 50%;
+  border-right:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  padding: 10px;
+}
+.discount-main img{
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  display: block;
+}
+.discount-main .pro-name{
+  margin-top: 10px;
+  height: 40px;
+}
+.discount-main .pro-price{
+  color: orange;
+  margin-top: 10px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 13px;
+}
+.discount-main .pro-form{
+  font-size: 12px;
+  color: #666666;
+  height: 26px;
+  line-height: 26px;
+}

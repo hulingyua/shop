@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/baicaijia.css">
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mmm-header">
+    <div class="logo-left">
+      <a class="fa fa-angle-left" href="index.html"></a>
+    </div>
+    <h2>白菜价 - 商品信息</h2>
+    <div class="app-dowmload">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </div>
+
+  <!--折扣商品信息-->
+  <div class="baicai-content">
+    <!--导航-->
+    <div class="baicai-nav">
+      <ul class="clearfix nav">
+       <!--模板引擎渲染tpl2-->
+
+
+      </ul>
+      <span class="fa fa-search"></span>
+    </div>
+    <!--内容列表-->
+    <div class="baicai-list">
+
+    </div>
+
+  </div>
+
+  <!--底部-->
+  <div class="mmb-footer">
+    <div class="footer-bar">
+      <div class="login"><a href="#">登录</a></div>
+      <div class="register"><a href="#">注册</a></div>
+      <div class="toTop"><a href="#"><img src="http://www.zuyushop.com/wap/images/more.png" alt="">回到顶部</a>
+      </div>
+    </div>
+    <div class="footer-msg">
+      <p><a href="#">手机APP下载</a>&nbsp;&nbsp; 慢慢买手机版&nbsp;&nbsp;<span> -- 掌上比价平台</span></p>
+      <p class="addr">m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/html" id="tpl">
+  {{each result as v i}}
+  <div class="baicai-item clearfix">
+    <a href="javascript:;">
+      {{#v.productImg}}
+      <p>{{#v.productName}}</p>
+      <p class="quanhou">{{#v.productPrice}}</p>
+      <div class="remain">
+        {{#v.productCouponRemain}}
+        <div class="outer"></div>
+        <div class="inner"></div>
+      </div>
+      <div class="percent">
+
+        {{#v.productCoupon}}
+      </div>
+      <div class="href">
+        {{#v.productHref}}
+      </div>
+    </a>
+  </div>
+{{/each}}
+</script>
+
+<script type="text/html" id="tpl2">
+  {{each result as v i}}
+  <li data-id="{{v.titleId}}" class="nav-item {{v.titleId == 0?'now':''}}">
+    <a href="javascript:;">
+      {{v.title}}
+    </a>
+  </li>
+  {{/each}}
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/baicaijia.js"></script>
+</body>
+</html>

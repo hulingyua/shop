@@ -33,14 +33,29 @@ $(function () {
             productid:productId
         },
         success: function (data) {
-            ;
             var proTitleArr=[];
             data.result.forEach(function (v,i) {
                 proTitleArr.push(v.productName.split(' ')[0]);
             });
             data.proTitleArr=proTitleArr;
-            console.log(data)
+            console.log(data);
+            //面包屑导航的商品品牌分类
             $('.pro-cate-name').html(template('tpl2',data));
+            //渲染页面商品内容
+            $('.bijia-content').html(template('tpl3',data));
+        }
+    });
+
+    //评论
+    $.ajax({
+        type:'get',
+        url:"http://127.0.0.1:9090/api/getproductcom",
+        data:{
+            productid:productId
+        },
+        success:function (data) {
+            console.log(data);
+            $('.comment-main').html(template('tpl4',data));
         }
     })
 });

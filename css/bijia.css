@@ -1,3 +1,116 @@
 /**
  * Created by huayu on 2017/11/6.
  */
+/*商品展示区*/
+.bijia-content{
+  background-color: #fff;
+  border-top:1px solid transparent;
+}
+.bijia-display{
+  width: 100%;
+}
+.bijia-pro-name{
+  margin:15px 30px 0;
+  text-align: center;
+  font-size: 18px;
+  height: 200px;
+}
+.bijia-display img{
+  margin: 0 auto;
+  display: block;
+}
+/*比价参数*/
+.bijia-info{
+  height: 34px;
+  border-top:solid 1px #c14d00;
+  border-bottom:solid 1px #c14d00;
+  box-sizing: border-box;
+}
+.bijia-info .bijia-buy,
+.bijia-info .bijia-canshu,
+.bijia-info .bijia-comment{
+  float: left;
+  height: 100%;
+  width: 33.33%;
+  background:linear-gradient(#ffd050,#ffbb00);
+  border-right:solid 1px #c14d00;
+  text-align: center;
+}
+.bijia-info .bijia-buy{
+  background: linear-gradient(#ffa632,#ff9000);
+}
+.bijia-info .bijia-comment{
+  border-right:none;
+}
+.bijia-info a{
+  width: 100%;
+  height: 100%;
+  line-height: 34px;
+  display: block;
+  color:#fff;
+  font-size: 14px;
+}
+/*来源*/
+.bijia-source table{
+  margin-top: 15px;
+}
+.bijia-source table tr{
+  padding-bottom:10px;
+}
+.bijia-note p{
+  color: #666;
+  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom:1px solid #ccc;
+  border-top:1px solid #ccc;
+}
+.comment-titile{
+  height: 40px;
+  line-height: 40px;
+  background-color: #c8c8c8;
+  text-align: center;
+  border-top:3px solid #080808;
+  box-sizing: border-box;
+}
+.comment-item{
+  border-bottom:1px solid #ccc;
+  padding: 10px;
+}
+.com-top{
+  font-size: 14px;
+  color: #ccc;
+}
+.com-top p{
+  /*line-height: 30px;*/
+}
+.time{
+  float: right;
+}
+.from{
+  text-align: right;
+}
+.com-content{
+  margin-top: 5px;
+  font-size: 12px;
+  color: #080808;
+  line-height: 20px;
+}
+.more-com{
+  padding: 15px 10px;
+}
+.more-com a{
+  display: block;
+  height: 32px;
+  background:linear-gradient(#f1f1f1, #d4d4d4);
+  line-height: 32px;
+  text-align: center;
+  border-radius: 5px;
+  border:1px solid #ccc
+}
+
+
+
+
+
+

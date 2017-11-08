@@ -35,7 +35,7 @@
   <!--面包屑导航-->
   <div class="pro-nav">
     <a href="index.html">首页&nbsp;</a><span>&gt;</span>
-    <a href="javascript:history.go(-1); "class="pro-nav-name">
+    <a href="javascript:history.go(-1); " class="pro-nav-name">
       <!--模板引擎渲染tpl-->
     </a>
     <a href="javascript:;" class="pro-cate-name">
@@ -43,10 +43,13 @@
     </a>
     <button>筛选</button>
   </div>
+  <!--比价内容-->
+  <div class="bijia-content">
 
 
 
 
+  </div>
 
 
   <!--底部-->
@@ -72,14 +75,59 @@
 </script>
 
 <script type="text/html" id="tpl2">
-{{each proTitleArr as v i}}
+  {{each proTitleArr as v i}}
   <span>{{v}}&nbsp;&gt;</span>
-{{/each}}
-
+  {{/each}}
 </script>
 
 <script type="text/html" id="tpl3">
 
+  {{each result as v i}}
+  <div class="bijia-display">
+    <div class="bijia-pro-name">
+      <p>{{v.productName}}</p>
+    </div>
+    {{#v.productImg}}
+  </div>
+  <!--比价参数-->
+  <div class="bijia-info">
+    <div class="bijia-buy"><a href="javascript:;">比价购买</a></div>
+    <div class="bijia-canshu"><a href="javascript:;">产品参数</a></div>
+    <div class="bijia-comment"><a href="javascript:;">评价</a></div>
+  </div>
+
+  <div class="bijia-source">
+    {{#v.bjShop}}
+
+    <div class="bijia-note">
+      <p>* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟</p>
+    </div>
+  </div>
+{{/each}}
+  <div class="comment-main">
+
+
+  </div>
+</script>
+<script type="text/html" id="tpl4">
+  <div class="comment-titile">网友评价</div>
+  {{each result as v i}}
+  <div class="comment-item">
+    <div class="com-top">
+      <p><span class="name">{{v.comName}}</span><span class="time">{{v.comTime}}</span></p>
+      <p class="from"><span>{{v.comFrom}}</span></p>
+
+    </div>
+
+    <div class="com-content">
+      <p>{{v.comContent}}</p>
+    </div>
+  </div>
+  {{/each}}
+  <!--查看更多-->
+  <div class="more-com">
+    <a href="javascript:;">查看更多评价</a>
+  </div>
 </script>
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/artTemplate/template.js"></script>

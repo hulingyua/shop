@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/moneyproduct.css">
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mmm-header">
+    <div class="logo-left">
+      <a class="fa fa-angle-left" href="index.html"></a>
+    </div>
+    <h2>省钱控 - 商品信息</h2>
+    <div class="app-dowmload">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </div>
+<div class="m-p-main">
+
+</div>
+  <!--底部-->
+  <div class="mmb-footer">
+    <div class="footer-bar">
+      <div class="login"><a href="#">登录</a></div>
+      <div class="register"><a href="#">注册</a></div>
+      <div class="toTop"><a href="#"><img src="http://www.zuyushop.com/wap/images/more.png" alt="">回到顶部</a>
+      </div>
+    </div>
+    <div class="footer-msg">
+      <p><a href="#">手机APP下载</a>&nbsp;&nbsp; 慢慢买手机版&nbsp;&nbsp;<span> -- 掌上比价平台</span></p>
+      <p class="addr">m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/html" id="tpl">
+{{each result as v i}}
+  <div class="money-p-title">
+    <h3>{{v.productName}}</h3>
+    <p><span>{{v.productFrom}}</span> <span>{{v.productTime}}</span> <span>{{v.productTips}}</span></p>
+  </div>
+  <!--省钱内容-->
+  <div class="money-p-content">
+    <div class="m-pro-info">
+      {{#v.productImgSm}}
+      <p>{{v.productInfo2}}</p>
+
+      {{#v.productImg2}}
+    </div>
+
+    <div class="m-pro-area">
+      {{#v.productCity}}
+    </div>
+  </div>
+  <a href="javascript:;" class="m-go-buy">
+    前往购买
+  </a>
+  <!--优惠间信息-->
+  <div class="m-message"><img src="images/mmbweixin2.png" alt=""></div>
+  <!--评论-->
+  <div class="m-comment">
+    {{#v.productComment}}
+  </div>
+{{/each}}
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/moneyproduct.js"></script>
+</body>
+</html>
